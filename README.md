@@ -46,8 +46,8 @@ This is a small model (\~5GB) with 7Billion parameters quantized to
 5bits per parameter.
 
 Any other model supported by `llama.cpp` should work. Check out the list
-of supported models on the \[`llama.cpp` github
-page\]([`llama.cpp`](https://github.com/ggerganov/llama.cpp)
+of supported models on the [`llama.cpp` github
+page](https://github.com/ggerganov/llama.cpp).
 
 ### Platform notes:
 
