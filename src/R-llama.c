@@ -85,6 +85,9 @@ SEXP llama_init_(SEXP model_path_, SEXP user_params_) {
 
   rctx *rdata;
   rdata = (rctx *)calloc(1, sizeof(rctx));
+  if (rdata == NULL) {
+    error("Could not allocate memory for 'rdata'");
+  }
   
   llama_init_backend();
   
@@ -119,6 +122,9 @@ SEXP llama_init_(SEXP model_path_, SEXP user_params_) {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   rdata->n_vocab = llama_n_vocab(ctx);
   rdata->candidates = calloc(rdata->n_vocab, sizeof(llama_token_data));
+  if (rdata->candidates == NULL) {
+    error("Couldn't allocate memory for rdata->candidates");
+  }
   for (int i = 0; i < rdata->n_vocab; i++) {
     rdata->candidates[i].id = i;  // llama_token id
   }

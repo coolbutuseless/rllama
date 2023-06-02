@@ -45,7 +45,7 @@ llama_default_params <- function() {
 #' @return llama context (\code{ctx})
 #' @export
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-llama_init <- function(model_path = "/Users/mike/projectsdata/llama.cpp/ggml-vic7b-q5_0.bin", params = list()) {
+llama_init <- function(model_path, params = list()) {
   user_params <- modifyList(llama_params, params, keep.null = TRUE)
   .Call(llama_init_, model_path, user_params)
 }
@@ -86,5 +86,17 @@ llama <- function(ctx, prompt, n = 50, repeat_penalty = 1.05, greedy = TRUE, tem
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if (FALSE) {
   ctx <- llama_init(model_path = "/Users/mike/projectsdata/llama.cpp/ggml-vic7b-q5_0.bin")
-  llama(ctx, "The green apple said to the mouse", n = 500, greedy = TRUE)
+  llama(ctx, "How can I calculate fibonacci numbers in R?", n = 500, greedy = FALSE)
+  
+  
+  ctx <- llama_init(model_path = "/Users/mike/projectsdata/llama.cpp/ggml-vic7b-uncensored-q5_1.bin")
+  llama(ctx, "Jenny Bryan saw someone use setwd() and then she", n = 500, greedy = FALSE)
+  
+  
+  
+  
+  
+  
+  
+  
 }

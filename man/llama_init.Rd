@@ -4,10 +4,7 @@
 \alias{llama_init}
 \title{Initialise llama.cpp by loading a model}
 \usage{
-llama_init(
-  model_path = "/Users/mike/projectsdata/llama.cpp/ggml-vic7b-q5_0.bin",
-  params = list()
-)
+llama_init(model_path, params = list())
 }
 \arguments{
 \item{model_path}{path to llama.cpp model.}
