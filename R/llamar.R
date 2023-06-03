@@ -86,7 +86,7 @@ llama <- function(ctx, prompt, n = 50, repeat_penalty = 1.05, greedy = TRUE, tem
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if (FALSE) {
   ctx <- llama_init(model_path = "/Users/mike/projectsdata/llama.cpp/ggml-vic7b-q5_0.bin")
-  llama(ctx, "How can I calculate fibonacci numbers in R?", n = 500, greedy = FALSE)
+  llama(ctx, "Jenny Bryan saw someone use setwd() and then she", n = 500, greedy = FALSE)
   
   
   ctx <- llama_init(model_path = "/Users/mike/projectsdata/llama.cpp/ggml-vic7b-uncensored-q5_1.bin")

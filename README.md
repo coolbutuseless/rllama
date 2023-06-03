@@ -49,6 +49,18 @@ Any other model supported by `llama.cpp` should work. Check out the list
 of supported models on the [`llama.cpp` github
 page](https://github.com/ggerganov/llama.cpp).
 
+### Model versions
+
+**Note:** This package uses the `llama.cpp` code from about the 25 May
+2023.
+
+The quantization formats (e.g. Q4, Q5 and Q8) have all changed within
+the last month.  
+Any older model files you have will probably **not** work with the
+latest `llama.cpp`. You’ll either have to requantize your models, or
+just download one in the appropriate format (e.g. from
+[here](https://huggingface.co/eachadea/ggml-vicuna-7b-1.1/tree/main)).
+
 ### Platform notes:
 
 This package has only been tested on macOS so please let me know of any
