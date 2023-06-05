@@ -16,10 +16,18 @@ This is a minimally-viable-product which accepts input and produces
 output, but the quality, interface, capabilities and configurability are
 all very (very!) basic.
 
+## `whisper.cpp`
+
+- Code snapshot:
+  - 25 May 2023
+  - master-66874d4
+
 # Future (contributions welcomed)
 
 - Better penalty system for avoiding recent tokens.
 - Cross-platform compilation settings (optimisation flags etc)
+- Implement context memory across calls to multiple calls to `llama()`
+  with the same context.
 
 ## Installation
 
